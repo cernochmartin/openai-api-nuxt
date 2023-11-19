@@ -1,5 +1,4 @@
 import OpenAI from 'openai'
-
 const openai = new OpenAI()
 
 async function main() {
@@ -8,12 +7,13 @@ async function main() {
       role: 'system', content: 'Provide the most precise answers.' 
     },
     {
-      role: 'user', content: 'What day is 27. 10. 2020'
+      role: 'user', content: 'hello world'
     }],
     model: 'gpt-3.5-turbo',
-  });
+  })
 
   console.log(completion.choices[0].message.content)
+  return completion.choices[0].message.content
 }
-
+  
 main()
