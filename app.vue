@@ -7,19 +7,12 @@ useSeoMeta({
 })
 
 const msg = ref('')
-
-function sendMsg() {
-  const { data } = useFetch('/api/openai.ts', {
-    method: 'POST',
-    body: msg
-  })
-}
 </script>
 <template>
   <h1>OpenAI API - Nuxt 3</h1>
     <section>
         <textarea v-model="msg" type="textarea" placeholder="Ask AI something..."></textarea>
-        <button @click="sendMsg()">ASK ME!</button>
+        <button @click="">ASK ME!</button>
     </section>
     <!-- <p v-for="message in message.content">{{ message.content }}</p> -->
 </template>
